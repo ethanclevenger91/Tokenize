@@ -526,13 +526,14 @@
             options = {};
         }
 
+        var obj;
         this.each(function(){
-            var obj = new $.tokenize($.extend({}, $.fn.tokenize.defaults, options));
+            obj = new $.tokenize($.extend({}, $.fn.tokenize.defaults, options));
             obj.init($(this));
             $(this).data(DATA, obj);
         });
 
-        return this;
+        return obj;
 
     };
 
